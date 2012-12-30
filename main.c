@@ -31,7 +31,6 @@ void main(char argc, char *argv[])
 	}
 
 	fgets(pole,sizeof(pole)-1, out);
-	printf("%s\n",pole);
 	int i = strlen(pole);
 	pole[i-1] = 0;
 
@@ -39,11 +38,12 @@ void main(char argc, char *argv[])
 
 	if (strstr(file,pole) != NULL)
 	{
-		printf("same\n");
+//		printf("same\n");
 		exit(0);
 	}
 
 	fclose(fn);
+	printf("%s\n",pole);
 	printf("not same\n");
 
 	fn = fopen(argv[1],"w");
